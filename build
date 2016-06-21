@@ -1,0 +1,20 @@
+#!/bin/bash
+
+(
+  cd docker/base &&
+  docker build --tag skulltronix/base .
+) || exit
+(
+  cd docker/sklltrnx &&
+  docker build --tag skulltronix/sklltrnx .
+) || exit
+
+(
+  cd docker/edison-clone &&
+  docker build --tag skulltronix/edison-clone .
+) || exit
+
+(
+  cd docker/edison-build &&
+  docker build --tag skulltronix/edison-build .
+) || exit
